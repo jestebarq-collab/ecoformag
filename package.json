@@ -1,3 +1,4 @@
+cat > package.json <<'EOF'
 {
   "name": "ecoformag",
   "private": true,
@@ -18,3 +19,16 @@
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.17"
   }
+npm install
+
+git add package.json package-lock.json
+
+git commit -m "Fix package json final real"
+
+git push origin main
+EOF
+EOF
+npm install
+git add package.json package-lock.json
+git commit -m "Fix package json final"
+git push origin main
