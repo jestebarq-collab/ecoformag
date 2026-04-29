@@ -1,79 +1,107 @@
-import { motion } from 'framer-motion'
+import Head from "next/head";
 
-export default function Ecoformag(){
-return (
-<main className='min-h-screen bg-black text-white'>
+export default function Home() {
+  return (
+    <>
+      <Head>
+        <title>EcoFormag | Construcción y Automatización Sustentable</title>
+        <meta
+          name="description"
+          content="Construcción modular, obras civiles, energía solar y soluciones técnicas en Magallanes."
+        />
+      </Head>
 
-{/* HERO */}
-<section className='py-20 text-center max-w-6xl mx-auto px-6'>
-<div className='flex justify-center mb-8'>
-<img src='/logo.png' alt='Ecoformag' className='h-20 md:h-24 w-auto drop-shadow-2xl'/>
-</div>
-<h1 className='text-5xl md:text-7xl font-bold leading-tight'>Infraestructura técnica para proyectos exigentes en Magallanes</h1>
-<p className='mt-6 text-xl text-zinc-300'>Construcción, sistemas fotovoltaicos, automatización y módulos prefabricados integrados para operar en zonas extremas.</p>
-<div className='mt-10 flex flex-col md:flex-row gap-4 justify-center'>
-<a href='https://wa.me/56942787051' className='px-8 py-4 rounded-2xl bg-green-500 text-black hover:bg-green-400 font-semibold'>Cotizar Proyecto</a>
-<a href='#proyectos' className='px-8 py-4 rounded-2xl border border-green-500 text-green-400 hover:bg-green-500 hover:text-black'>Ver Proyectos</a>
-</div>
-</section>
+      <main className="min-h-screen bg-black text-white">
+        {/* HERO */}
+        <section
+          className="bg-cover bg-center min-h-screen flex items-center"
+          style={{
+            backgroundImage:
+              "url('/galeria/principal.jpg')",
+          }}
+        >
+          <div className="bg-black/60 w-full h-full">
+            <div className="max-w-6xl mx-auto px-6 py-24">
+              <img
+                src="/logo.png"
+                alt="EcoFormag"
+                className="w-44 mb-8"
+              />
 
-{/* SERVICIOS */}
-<section className='max-w-6xl mx-auto px-6 py-16'>
-<h2 className='text-3xl font-semibold mb-10'>Servicios Integrales Ecoformag</h2>
-<div className='grid md:grid-cols-3 gap-6'>
-{[
-"Construcción y obras civiles",
-"Sistemas fotovoltaicos",
-"Automatización y control",
-"Electricidad y canalizaciones",
-"Módulos prefabricados a medida",
-"Mantenimiento y optimización"
-].map((s,i)=>(
-<div key={i} className='p-6 rounded-2xl bg-zinc-900 border border-zinc-800 shadow-2xl hover:bg-zinc-800 border border-green-500/20 transition'>
-{s}
-</div>
-))}
-</div>
-</section>
+              <h1 className="text-5xl md:text-7xl font-bold leading-tight">
+                Infraestructura técnica para proyectos exigentes en Magallanes
+              </h1>
 
-{/* PROYECTOS */}
-<section id='proyectos' className='max-w-6xl mx-auto px-6 py-16'>
-<h2 className='text-3xl font-semibold mb-10'>Proyectos ejecutados</h2>
-<p className='text-zinc-400 mb-8'>Experiencia real en terreno: construcción, montaje, módulos y soluciones energéticas.</p>
-<div className='grid md:grid-cols-3 gap-4'>
-{[
-{title:'Proyecto Modular',img:'/galeria/1.jpg'},
-{title:'Montaje en Terreno',img:'/galeria/2.jpg'},
-{title:'Interior Premium',img:'/galeria/3.jpg'},
-{title:'Fabricación Propia',img:'/galeria/4.jpg'},
-{title:'Obra Terminada',img:'/galeria/5.jpg'},
-{title:'Solución Industrial',img:'/galeria/6.jpg'}].map((item,i)=>(
-<div key={i} className='h-64 rounded-2xl overflow-hidden border border-green-500/20 relative group'>
-<img src={item.img} alt={item.title} className='w-full h-full object-cover group-hover:scale-105 transition duration-500'/>
-<div className='absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent'/>
-<div className='absolute bottom-0 left-0 p-4 font-semibold text-white'>{item.title}</div>
-</div>
-))}
-</div>
-</section>
+              <p className="mt-6 text-xl text-gray-200 max-w-2xl">
+                Construcción, energía, automatización y módulos prefabricados
+                integrados para operar en zonas extremas.
+              </p>
 
-{/* DIFERENCIALES */}
-<section className='max-w-6xl mx-auto px-6 py-16'>
-<h2 className='text-3xl font-semibold mb-10'>Ventajas Competitivas</h2>
-<div className='grid md:grid-cols-2 gap-6 text-zinc-300'>
-<div className='p-6 bg-zinc-900 rounded-2xl'>Ejecución completa: construimos, energizamos y automatizamos.</div>
-<div className='p-6 bg-zinc-900 rounded-2xl'>Fabricación propia de soluciones modulares.</div>
-<div className='p-6 bg-zinc-900 rounded-2xl'>Experiencia en clima extremo y logística compleja.</div>
-<div className='p-6 bg-zinc-900 rounded-2xl'>Respuesta rápida y enfoque técnico.</div>
-</div>
-</section>
+              <a
+                href="https://wa.me/56942787051"
+                target="_blank"
+                className="inline-block mt-8 bg-green-500 hover:bg-green-600 px-8 py-4 rounded-xl text-lg font-semibold"
+              >
+                Solicitar Cotización
+              </a>
+            </div>
+          </div>
+        </section>
 
-{/* CTA FINAL */}
-<section className='text-center py-24 border-t border-zinc-800'>
-<h2 className='text-4xl md:text-5xl font-bold'>Construimos soluciones reales con energía, ingeniería y terreno</h2>
-<p className='mt-4 text-zinc-400'>Punta Arenas • Magallanes • Patagonia</p>
-<a href='https://wa.me/56942787051' className='inline-block mt-8 px-10 py-4 bg-white text-black rounded-2xl font-semibold'>Hablar por WhatsApp</a>
-</section>
+        {/* SERVICIOS */}
+        <section className="max-w-6xl mx-auto px-6 py-20">
+          <h2 className="text-4xl font-bold text-green-400 mb-10">
+            Nuestros Servicios
+          </h2>
 
-</main>
-)}
+          <div className="grid md:grid-cols-2 gap-6 text-lg">
+            <div className="bg-zinc-900 p-6 rounded-2xl">
+              Construcción y Obras Civiles
+            </div>
+            <div className="bg-zinc-900 p-6 rounded-2xl">
+              Sistemas Fotovoltaicos
+            </div>
+            <div className="bg-zinc-900 p-6 rounded-2xl">
+              Automatización y Control
+            </div>
+            <div className="bg-zinc-900 p-6 rounded-2xl">
+              Módulos Prefabricados
+            </div>
+            <div className="bg-zinc-900 p-6 rounded-2xl">
+              Mantención y Optimización
+            </div>
+          </div>
+        </section>
+
+        {/* GALERÍA */}
+        <section className="bg-zinc-950 py-20 px-6">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-4xl font-bold text-green-400 mb-10">
+              Proyectos Ejecutados
+            </h2>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              <img src="/galeria/1.jpg" className="rounded-2xl" />
+              <img src="/galeria/2.jpg" className="rounded-2xl" />
+              <img src="/galeria/3.jpg" className="rounded-2xl" />
+              <img src="/galeria/4.jpg" className="rounded-2xl" />
+              <img src="/galeria/5.jpg" className="rounded-2xl" />
+              <img src="/galeria/6.jpg" className="rounded-2xl" />
+            </div>
+          </div>
+        </section>
+
+        {/* FOOTER */}
+        <footer className="py-14 text-center border-t border-zinc-800">
+          <p className="text-xl font-semibold text-green-400">
+            Hablemos de tu proyecto
+          </p>
+          <p className="mt-2 text-2xl font-bold">+56 9 4278 7051</p>
+          <p className="mt-2 text-gray-400">
+            Punta Arenas · Magallanes · Chile
+          </p>
+        </footer>
+      </main>
+    </>
+  );
+}
